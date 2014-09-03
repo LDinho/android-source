@@ -10,7 +10,7 @@ public class WorstPractices extends Object {
 
 	public static void main(String [] args) {
 
-		int MAGIC_NUMBER = WorstPractices.animals(false);
+		int MAGIC_NUMBER;
 
 		MAGIC_NUMBER *= 5;
 
@@ -21,6 +21,7 @@ public class WorstPractices extends Object {
 				return MAGIC_NUMBER;
 			}
 		}
+		WorstPractices.animals(false);
 	}
 
 	/* 	animals
