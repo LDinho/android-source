@@ -9,32 +9,33 @@ import java.io.InputStreamReader;
 public class Operations extends Object {
 
 	public static void main(String [] args) {
-		int x = 0;
+		int x = 18;
 		/*
 			ASSIGNMENT:
 			Place 18 into x
 		*/
-		int y = 0;
+		int y = ++x;
 		/*
 			ASSIGNMENT:
 			Pre-increment x and assign it to y in a single statement
 		*/
-		int z = 0;
+		int z = x * y;
 		/*
 			ASSIGNMENT:
 			Multiply x by y, assign it to z
 		*/
-		int remainder = 0;
+		int remainder = 17 % z;
 		/*
 			ASSIGNMENT:
 			Mod z by 17 and assign the result to remainder
 		*/
-		float floaty = 0f;
+		float floaty = 5f / 3;
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
 		*/
-		double dubs = 0d;
+		double dubs = 5.3d;
+		dubs = dubs-- * dubs;
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs
