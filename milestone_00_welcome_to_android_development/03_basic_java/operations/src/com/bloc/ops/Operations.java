@@ -24,7 +24,7 @@ public class Operations extends Object {
 			ASSIGNMENT:
 			Multiply x by y, assign it to z
 		*/
-		int remainder = 17 % z;
+		int remainder = z % 17;
 		/*
 			ASSIGNMENT:
 			Mod z by 17 and assign the result to remainder
