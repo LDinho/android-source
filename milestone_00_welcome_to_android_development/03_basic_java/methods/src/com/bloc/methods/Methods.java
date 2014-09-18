@@ -27,12 +27,26 @@ public class Methods extends Object {
 	 * @return the logical opposite of the original
 	 */
 	public boolean giveMeTheOpposite(boolean original) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
+		
+		////////////////////////////////
+		// Your work goes here
+
+		 if (original) {
+	
+			return false;
+
+		 } else {
+
+		 	return true;
+
+		 }
+
+		 // return !original;  <==== Best way to write the code above
+
+		////////////////////////////////
 
 		// You are free to modify the return statement
-		return false;
+		// return false;
 	}
 
 	/*
@@ -50,9 +64,16 @@ public class Methods extends Object {
 	 * @return nothing
 	 */
 	public void flipTheSign(int[] numbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
+
+		////////////////////////////////////
+		//Your work goes here
+
+		 for (int i = 0; i < numbers.length; i++) {
+
+			numbers[i] *= -1;
+		 }
+
+		 ///////////////////////////////////
 	}
 
 
@@ -78,12 +99,31 @@ public class Methods extends Object {
 	 * @return an array of booleans
 	 */
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
+
+		//////////////////////////////
+		// Your work goes here
+
+		boolean[] a = new boolean[someNumbers.length];
+
+		for (int i = 0; i < someNumbers.length; i++) {	
+
+			// alternate shorthand: a[i] = floor <= someNumbers[i]
+
+			if (floor <= someNumbers[i]) {
+
+				a[i] = true;		
+
+			} else {
+
+				a[i] = false;
+			}
+
+		}
+
+		////////////////////////////////
 
 		// You are free to modify the return statement
-		return new boolean [0];
+		return a;
 	}
 
 	/*
@@ -103,12 +143,29 @@ public class Methods extends Object {
 	 * @return an array of length 2: {min, max}
 	 */
 	public int[] getMinAndMax(int[] someNumbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
 
+		/////////////////////////////////
+		// Your work goes here
+
+		int max = someNumbers[0];
+		int min = someNumbers[0];
+
+		for (int i = 1; i < someNumbers.length; i++) {
+			
+			if (someNumbers[i] < min) {
+
+				min = someNumbers[i];
+			}
+
+			if (someNumbers[i] > max) {
+
+				max = someNumbers[i];
+			}
+		}
+
+		///////////////////////////////////
 		// You are free to modify the return statement
-		return new int[2];
+		return new int[] {min, max};
 	}
 
 
