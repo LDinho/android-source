@@ -218,17 +218,24 @@ abstract class Dog {
 	 * 		   array of {"tiny", "small", "average", "large"}
 	 */
 	int getSizeIndex(String size) {
-		if (size == null) {
-			// Return default "average" when missing size
+		
+		if ("tiny".equals(size)) {
+
+			return 0;
+
+		} else if ("small".equals(size)) {
+
+			return 1;
+
+		} else if ("large".equals(size)) {
+
+			return 3;
+
+		} else if ("average".equals(size)) {
 			return 2;
-		}
-		switch(size) {
-			case "tiny": return 0;
-			case "small": return 1;
-			case "average": return 2;
-			case "large": return 3;
-			default: return 2;
-		}
+		} else
+
+		return 2; // average is default
 	}
 
 	/*
