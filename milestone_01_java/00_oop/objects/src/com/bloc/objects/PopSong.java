@@ -11,6 +11,19 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 
+	PopSong() {
+
+		Artist[] testArtist = new Artist[0]; // create one new artist
+
+		Ensemble testEnsemble = new Ensemble("The Fugees", testArtist);
+
+		this.mEnsemble = testEnsemble;
+
+		this.mTitle = "Killing Me Softly";
+		this.mYearReleased = 1996;
+		this.mWeeksOnBillboard = 5;
+	}
+
 	/*
 	 * Partial Constructor
 	 * Side-effects: Sets the year of release to 0
@@ -18,6 +31,13 @@ class PopSong extends Song {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+
+	PopSong(Ensemble ensemble, String title) {
+		
+		this.mYearReleased = 0;
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+	}	
 
 	/*
 	 * Full Song Constructor
@@ -28,6 +48,16 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 
+	PopSong(Ensemble ensemble, String title, int yearReleased) {
+
+		this.mWeeksOnBillboard = 0;
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = yearReleased;
+
+
+	}
+
 	/*
 	 * Full PopSong Constructor
 	 * @param ensemble the ensemble responsible
@@ -37,4 +67,16 @@ class PopSong extends Song {
 	 *		  				   Billboard's top 100
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+
+	PopSong(Ensemble ensemble, String title, int yearReleased, int weeksOnBillboard) {
+
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = yearReleased;
+		this.mWeeksOnBillboard = weeksOnBillboard;
+
+	}
 }
+
+
+

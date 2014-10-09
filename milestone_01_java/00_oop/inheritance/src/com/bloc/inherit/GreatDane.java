@@ -57,7 +57,7 @@ public class GreatDane extends Dog {
 		} else if (sizeIndex < 0) {
 			sizeIndex = 0;
 		}
-		setSize(fromSizeIndex(sizeIndex));  // do i need this here if it already exists in the original method in the Dog class?
+		setSize(fromSizeIndex(sizeIndex));
 	}
 }
 
