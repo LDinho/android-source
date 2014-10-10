@@ -39,7 +39,7 @@ class Ensemble extends Object {
 		}
 
 		this.mName = name;     // REVISIT -- ASK ABOUT THIS AGAIN !!
-		this.mArtists = mArtists;  // has no effect mild error in Eclipse !!
+		this.mArtists = artists;
 	}
 }
 

@@ -14,7 +14,6 @@ class Artist extends Object {
 	// CONSTRUCTOR CODE GOES HERE
 	public Artist(String firstName, String lastName) {
 
-		// do I use mFirstName in @param??
 		this.mFirstName = firstName;
 		this.mLastName = lastName;
 

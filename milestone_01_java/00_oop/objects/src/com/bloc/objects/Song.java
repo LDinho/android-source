@@ -20,14 +20,19 @@ class Song extends Object {
 		// Create array of artists for the ensemble
 		//create one artist for the array of artist -- Artist testArtist
 
-		Artist[] testArtist = new Artist[0]; // create one new artist
+		Artist artist = new Artist("The", "Fugees");
+
+		Artist[] testArtist = new Artist[]{artist}; // create one new artist
 
 		Ensemble testEnsemble = new Ensemble("The Fugees", testArtist);
+		//Alternate way to put all above in one line of code:
+		//Ensemble testEnsemble = new Ensemble("The Fugees", new Artist[]{new Artist("The", "Fugees")}
 
 		this.mEnsemble = testEnsemble; //change?
 
 		this.mTitle = "Killing Me Softly";
 		this.mYearReleased = 1996;
+
 	}
 
 	/*

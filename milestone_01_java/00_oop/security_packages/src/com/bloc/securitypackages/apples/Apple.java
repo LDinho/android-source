@@ -7,7 +7,7 @@ public abstract class Apple extends Fruit {
 
 	public Apple(String name, int calories, Color color, double weight) {
 
-		// super(); // why super not needed here??
+		super(name, calories, color, weight);
 	}
 
 	abstract void bite();

@@ -13,14 +13,17 @@ class PopSong extends Song {
 
 	PopSong() {
 
-		Artist[] testArtist = new Artist[0]; // create one new artist
+		super();
 
-		Ensemble testEnsemble = new Ensemble("The Fugees", testArtist);
+		// Artist[] testArtist = new Artist[1]; // create one new artist
 
-		this.mEnsemble = testEnsemble;
+		// Ensemble testEnsemble = new Ensemble("The Fugees", testArtist);
 
-		this.mTitle = "Killing Me Softly";
-		this.mYearReleased = 1996;
+		// this.mEnsemble = testEnsemble;
+
+		// this.mTitle = "Killing Me Softly";
+		// this.mYearReleased = 1996;
+
 		this.mWeeksOnBillboard = 5;
 	}
 
@@ -34,9 +37,13 @@ class PopSong extends Song {
 
 	PopSong(Ensemble ensemble, String title) {
 		
-		this.mYearReleased = 0;
-		this.mEnsemble = ensemble;
-		this.mTitle = title;
+		super(ensemble, title);
+
+		// this.mYearReleased = 0;
+		// this.mEnsemble = ensemble;
+		// this.mTitle = title;
+
+		this.mWeeksOnBillboard = 0;
 	}	
 
 	/*
@@ -50,10 +57,12 @@ class PopSong extends Song {
 
 	PopSong(Ensemble ensemble, String title, int yearReleased) {
 
+		super(ensemble, title, yearReleased);
+
 		this.mWeeksOnBillboard = 0;
-		this.mEnsemble = ensemble;
-		this.mTitle = title;
-		this.mYearReleased = yearReleased;
+		// // this.mEnsemble = ensemble;
+		// // this.mTitle = title;
+		// this.mYearReleased = yearReleased;
 
 
 	}
@@ -70,9 +79,12 @@ class PopSong extends Song {
 
 	PopSong(Ensemble ensemble, String title, int yearReleased, int weeksOnBillboard) {
 
-		this.mEnsemble = ensemble;
-		this.mTitle = title;
-		this.mYearReleased = yearReleased;
+		super(ensemble, title, yearReleased);
+
+		// this.mEnsemble = ensemble;
+		// this.mTitle = title;
+		// this.mYearReleased = yearReleased;
+		
 		this.mWeeksOnBillboard = weeksOnBillboard;
 
 	}
