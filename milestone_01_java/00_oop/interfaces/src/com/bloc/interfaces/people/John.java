@@ -19,28 +19,28 @@ public class John extends Person implements Driver {
 
 	}
 
-	public void getInPlane() {
+	// public void getInPlane() {
 
-	}
+	// }
 
-	public void jumpFromPlane() {
+	// public void jumpFromPlane() {
 
-	}
+	// }
 
-	public void releaseParachute() {
+	// public void releaseParachute() {
 
-	}
+	// }
 
-	public void putOnShoes() {
+	// public void putOnShoes() {
 
-	}
+	// }
 
-	public void findAPartner() {
+	// public void findAPartner() {
 
-	}
+	// }
 
-	public void salsa() {
+	// public void salsa() {
 		
-	}
+	// }
 
 }
