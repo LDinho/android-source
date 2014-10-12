@@ -7,14 +7,17 @@ public class Albert extends Person implements SalsaDancer {
 		super("Albert", "Cobb", "Male", 1.8d, 72d, "Green");
 	}
 
+	@Override
 	public void putOnShoes() {
 
 	}
 
+	@Override
 	public void findAPartner() {
 
 	}
 
+	@Override
 	public void salsa() {
 		
 	}

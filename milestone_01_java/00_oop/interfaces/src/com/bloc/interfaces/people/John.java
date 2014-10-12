@@ -7,14 +7,17 @@ public class John extends Person implements Driver {
 		super("John", "Smith", "Male", 1.7d, 69d, "Brown");
 	}
 
+	@Override
 	public void getInCar() {
 
 	}
 
+	@Override
 	public void startEngine() {
 
 	}
 
+	@Override
 	public void driveFast() {
 
 	}
