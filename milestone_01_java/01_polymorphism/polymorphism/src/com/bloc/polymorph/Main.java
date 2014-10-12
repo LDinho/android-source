@@ -14,25 +14,40 @@ public class Main extends Object {
 
 		// Accomplish the below using polymorphism
 
-		dog.feed();
-		dog.wash();
-		dog.exercise();
+		Pet[] pets = new Pet[] {dog, cat, bird, snake, tarantula};
+		// pet[0] = {dog};
+		// pet[1] = {cat};
+		// pet[2] = {bird};
+		// pet[3] = {snake};
+		// pet[4] = {tarantula};  // Error -- only used in initializers
+		for(int i = 0; i < pets.length; i++) {
 
-		cat.feed();
-		cat.wash();
-		cat.exercise();
+			pets[i].feed();
+			pets[i].wash();
+			pets[i].exercise();
+		}
 
-		bird.feed();
-		bird.wash();
-		bird.exercise();
 
-		snake.feed();
-		snake.wash();
-		snake.exercise();
 
-		tarantula.feed();
-		tarantula.wash();
-		tarantula.exercise();
+		// dog.feed();
+		// dog.wash();
+		// dog.exercise();
+
+		// cat.feed();
+		// cat.wash();
+		// cat.exercise();
+
+		// bird.feed();
+		// bird.wash();
+		// bird.exercise();
+
+		// snake.feed();
+		// snake.wash();
+		// snake.exercise();
+
+		// tarantula.feed();
+		// tarantula.wash();
+		// tarantula.exercise();
 
 		// Accomplish the above using polymorphism
 
