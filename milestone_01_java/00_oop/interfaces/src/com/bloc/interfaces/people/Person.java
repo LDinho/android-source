@@ -1,9 +1,11 @@
 package com.bloc.interfaces.people;
 
-public abstract class Person extends Object {
+import com.bloc.interfaces.people.hobbies.*;
+
+public class Person extends Object implements Driver, Skydiver, SalsaDancer {
 	// First name
 	private String mFirstName;
-	// Sur name
+	// Surname
 	private String mLastName;
 	// Gender
 	private String mGender;
@@ -78,25 +80,46 @@ public abstract class Person extends Object {
 	}
 
 	/*
-	 * Abstract void
+	 * abstract void
 	 methods
 	 */
 
-	public abstract void getInCar();
+	public void getInCar() {
 
-	public abstract void startEngine();
+	}
 
-	public abstract void driveFast();
+	public void startEngine() {
 
-	public abstract void getInPlane();
+	}
 
-	public abstract void jumpFromPlane();
+	public void driveFast() {
 
-	public abstract void releaseParachute();
+	}
 
-	public abstract void putOnShoes();
+	public void getInPlane() {
 
-	public abstract void findAPartner();
+	}
 
-	public abstract void salsa();
+	public void jumpFromPlane() {
+
+	}
+
+	public void releaseParachute() {
+
+	}
+
+	public void putOnShoes() {
+
+	}
+
+	public void findAPartner() {
+
+	}
+
+	public void salsa() {
+
+	}
 }
+
+
+
