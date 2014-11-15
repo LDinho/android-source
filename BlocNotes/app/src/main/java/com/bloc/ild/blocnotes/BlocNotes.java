@@ -27,6 +27,9 @@ public class BlocNotes extends Activity
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
+    // Declare NoteFragment -- AS suggestion to convert to local variable?
+    //    private NoteFragment mNoteFragment;
+
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
@@ -45,6 +48,10 @@ public class BlocNotes extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        // Instantiating NoteFragment -- This Fragment is for viewing/editing notes
+        NoteFragment mNoteFragment = new NoteFragment();
+        getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment).commit();
     }
 
     @Override
