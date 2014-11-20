@@ -2,7 +2,6 @@ package com.bloc.ild.blocnotes;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +23,7 @@ public class NoteFragment extends Fragment {
         // getContext() = Returns the context the view is running in, through which it can access the current theme, resources, etc.
         // getActivity() = Returns the Activity this fragment is currently associated with.
 
+        /*
         RelativeLayout relativeLayout = new RelativeLayout(getActivity());
         EditText editText = new EditText(getActivity());
 
@@ -31,5 +31,12 @@ public class NoteFragment extends Fragment {
         relativeLayout.addView(editText, params);
 
         return relativeLayout;
+        */
+
+        View rootView = inflater.inflate(R.layout.fragment_note, container, false); // Inflate fragment_note layout = translating the XML file into a view
+
+        EditText editText = (EditText) rootView.findViewById(R.id.et_editText); // is this needed here (XML checkpoint)?
+
+        return rootView;
     }
 }
