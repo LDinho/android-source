@@ -29,6 +29,8 @@ public class BlocNotes extends Activity
 
     private NoteFragment mNoteFragment;
 
+    private static final String NOTEFRAGMENT = "noteFragment";
+
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
@@ -53,10 +55,14 @@ public class BlocNotes extends Activity
         if (savedInstanceState == null) {
             mNoteFragment = new NoteFragment(); // new note created
 
-            getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment).commit();
+        } else {
 
+            mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
         }
 
+        //When savedInstanceState is not null, Tagged NoteFragment is referred to here
+
+        getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment, NOTEFRAGMENT).commit();
 
     }
 
