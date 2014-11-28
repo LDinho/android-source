@@ -13,6 +13,9 @@ import android.widget.RelativeLayout;
  */
 public class NoteFragment extends Fragment {
 
+    private EditText editText;
+    private static final String ENTERED_TEXT = "enteredText";
+
     public NoteFragment() {
 
     }
@@ -35,8 +38,24 @@ public class NoteFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_note, container, false); // Inflate fragment_note layout = translating the XML file into a view
 
-        EditText editText = (EditText) rootView.findViewById(R.id.et_editText); // is this needed here (XML checkpoint)?
+        editText = (EditText) rootView.findViewById(R.id.et_editText); // getting the entered text
+
+        if (savedInstanceState != null) {       // Here we check if there was a previous state that existed before (a destroyed state).
+
+            editText.setText(savedInstanceState.getString(ENTERED_TEXT)); // Restore the text entered from saved state.
+        }
 
         return rootView;
+    }
+
+    // The method below is called to ask the fragment to save its current dynamic state,
+    // so it can later be reconstructed in a new instance of its process is restarted.
+    // If a new instance of the fragment later needs to be created, the data you place in the Bundle here
+    // will be available in the Bundle given to onCreateView(LayoutInflater, ViewGroup, Bundle).
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(ENTERED_TEXT, editText.getText().toString());
     }
 }
