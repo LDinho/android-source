@@ -16,7 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class BlocNotes extends Activity
@@ -119,11 +121,24 @@ public class BlocNotes extends Activity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        /* int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } */
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                return true;
+
+            case R.id.action_erase:
+                EditText editText = (EditText) findViewById(R.id.et_editText);
+                editText.getText().clear();
+                return true;
+
+            case R.id.action_add_notebook:
+                Toast.makeText(getApplicationContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+
         }
 
         return super.onOptionsItemSelected(item);
