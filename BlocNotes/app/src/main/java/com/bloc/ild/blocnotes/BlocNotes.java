@@ -55,16 +55,14 @@ public class BlocNotes extends Activity
         if (savedInstanceState == null) {
             mNoteFragment = new NoteFragment(); // new note created
 
-        } else {
-
-            mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
+            getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment, NOTEFRAGMENT).commit();
         }
+        //When savedInstanceState is not null, Tagged NoteFragment is referred to
 
-        //When savedInstanceState is not null, Tagged NoteFragment is referred to here
-
-        getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment, NOTEFRAGMENT).commit();
+        mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
 
     }
+    //TODO Fix Rotation Bug - NoteFragment disappears upon restoring Rotation back to portrait
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
