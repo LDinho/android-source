@@ -1,12 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".BlocNotes">
+
     <item android:id="@+id/action_example" android:title="@string/action_example"
         android:showAsAction="withText|ifRoom" />
+
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 
-    <item android:id="@+id/action_erase" android:title="@string/action_erase"
-        android:orderInCategory="100" android:icon="@drawable/ic_menu_delete"
+    <item android:id="@+id/action_style_dialog" android:title="@string/action_style_dialog"
+        android:orderInCategory="101" android:icon="@drawable/ic_menu_view"
         android:showAsAction="always"
         />
+
+    <item android:id="@+id/action_erase" android:title="@string/action_erase"
+        android:orderInCategory="102" android:icon="@drawable/ic_menu_delete"
+        android:showAsAction="always"
+        />
+
 </menu>

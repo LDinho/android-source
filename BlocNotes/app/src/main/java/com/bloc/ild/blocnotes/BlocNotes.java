@@ -138,10 +138,27 @@ public class BlocNotes extends Activity
 
             case R.id.action_add_notebook:
                 Toast.makeText(getApplicationContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_style_dialog:
+                CustomStyleDialogFragment dialog = new CustomStyleDialogFragment(); // To show style dialog view
+                dialog.show(getFragmentManager(), null);
+                return true;
 
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void onStyleChange(CustomStyleDialogFragment dialog, int styleId) {
+
+    }
+    public void onFontChange(CustomStyleDialogFragment dialog, String fontName) {
+
+    }
+    public void onThemeChange(CustomStyleDialogFragment dialog, int themeId){
+
     }
 
     /**
