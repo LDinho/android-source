@@ -76,7 +76,7 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
+//        selectItem(mCurrentSelectedPosition);    //Commenting this out fixed the Rotation bug - EditText view is now saved when rotating back to portrait
     }
 
     @Override

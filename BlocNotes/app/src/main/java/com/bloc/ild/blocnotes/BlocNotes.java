@@ -64,7 +64,6 @@ public class BlocNotes extends Activity
         mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
 
     }
-    //TODO Fix Rotation Bug - NoteFragment disappears upon restoring Rotation back to portrait
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
