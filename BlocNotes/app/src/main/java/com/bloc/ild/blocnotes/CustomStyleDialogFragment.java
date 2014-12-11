@@ -1,12 +1,13 @@
 package com.bloc.ild.blocnotes;
 
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 
 public class CustomStyleDialogFragment extends DialogFragment {
@@ -27,10 +28,36 @@ public class CustomStyleDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
 
         //Include a title within the dialog framelayout
-        getDialog().setTitle("View Style Options");
+        getDialog().setTitle("Choose Font Style");
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_custom_style_dialog, container, false);
+
+        //Show spinner view layout
+        Spinner spinner = (Spinner) view.findViewById(R.id.font_selector);
+
+        //Set string values for the font spinner
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.font_array, android.R.layout.simple_spinner_item);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
+
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //show anything here?
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                //show message here?
+
+            }
+        });
 
         return view;
     }

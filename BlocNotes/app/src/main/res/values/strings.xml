@@ -15,6 +15,15 @@
     <string name="action_add_notebook">Add Notebook</string>
     <string name="action_style_dialog">Custom Style Dialog</string>
     <string name="custom_view_dialog">Default Style View</string>
+    <string name="system_fonts">System Fonts</string>
+
+
+    <string-array name="font_array">
+        <item>Default Font</item>
+        <item>Helvetica</item>
+        <item>Helvetica-Neue</item>
+        <item>Impact</item>
+    </string-array>
 
 
 

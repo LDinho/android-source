@@ -3,8 +3,13 @@
     android:layout_height="match_parent"
     tools:context="com.bloc.ild.blocnotes.CustomStyleDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/custom_view_dialog" />
+    <!--<TextView android:layout_width="match_parent" android:layout_height="match_parent"-->
+        <!--android:text="@string/custom_view_dialog" />-->
+
+    <Spinner
+        android:id="@+id/font_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/system_fonts"/>
 
 </FrameLayout>
