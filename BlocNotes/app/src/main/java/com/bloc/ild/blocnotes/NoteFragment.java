@@ -1,6 +1,7 @@
 package com.bloc.ild.blocnotes;
 
 import android.app.Fragment;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,4 +59,18 @@ public class NoteFragment extends Fragment {
         super.onSaveInstanceState(outState);
         outState.putString(ENTERED_TEXT, editText.getText().toString());
     }
+
+    // change the editText field font
+
+    public void setFont(String fontSelected) {
+
+        if (fontSelected == null) {
+            return;
+        }
+
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/" + fontSelected);
+        editText.setTypeface(font);
+
+    }
+
 }

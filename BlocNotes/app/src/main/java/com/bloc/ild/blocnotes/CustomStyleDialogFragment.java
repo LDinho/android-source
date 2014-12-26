@@ -9,12 +9,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 
 public class CustomStyleDialogFragment extends DialogFragment {
 
+    // holds objects to be notified of changes
+    private ArrayList<CustomStyleFont> mObserver;
+
 
     public CustomStyleDialogFragment() {
-        // Required empty public constructor
+
+        mObserver = new ArrayList<CustomStyleFont>();
     }
 
     @Override
@@ -45,21 +51,47 @@ public class CustomStyleDialogFragment extends DialogFragment {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
-                //show anything here?
+                //
+                String[] fonts = getResources().getStringArray(R.array.font_array);
+                String font = fonts[parent.getSelectedItemPosition()] + ".ttf";
+                font = font.toLowerCase();
+                changeFont(font);
 
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
-                //show message here?
-
+                //nothing
             }
         });
 
         return view;
+    }
+
+    public void addListener(CustomStyleFont listener) {
+        mObserver.add(listener);
+
+    }
+
+    public void changeFont(String font) {
+        for (CustomStyleFont listener : mObserver) {
+            listener.onFontChange(this, font);
+        }
+
+    }
+
+    //Interface that activities hosting this fragment must implement
+
+    public interface CustomStyleFont {
+
+        public void onStyleChange(CustomStyleDialogFragment dialog, int styleId);
+
+        public void onFontChange(CustomStyleDialogFragment dialog, String fontName);
+
+        public void onThemeChange(CustomStyleDialogFragment dialog, int themeId);
     }
 
 }

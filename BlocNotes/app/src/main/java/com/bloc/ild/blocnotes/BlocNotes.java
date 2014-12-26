@@ -20,10 +20,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.List;
+
 
 public class BlocNotes extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, CustomStyleDialogFragment.CustomStyleFont {
 
+    //TODO FIX when changing font style, it's not saved upon rotation
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -58,10 +62,14 @@ public class BlocNotes extends Activity
             mNoteFragment = new NoteFragment(); // new note created
 
             getFragmentManager().beginTransaction().add(R.id.container, mNoteFragment, NOTEFRAGMENT).commit();
-        }
-        //When savedInstanceState is not null, Tagged NoteFragment is referred to
+        } else {
 
-        mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
+            //When savedInstanceState is not null, Tagged NoteFragment is referred to
+
+            mNoteFragment = (NoteFragment) getFragmentManager().findFragmentByTag(NOTEFRAGMENT);
+
+        }
+
 
     }
 
@@ -141,7 +149,8 @@ public class BlocNotes extends Activity
 
             case R.id.action_style_dialog:
                 CustomStyleDialogFragment dialog = new CustomStyleDialogFragment(); // To show style dialog view
-                dialog.show(getFragmentManager(), null);
+                dialog.addListener(this);
+                dialog.show(this.getFragmentManager(), null);
                 return true;
 
         }
@@ -149,13 +158,21 @@ public class BlocNotes extends Activity
         return super.onOptionsItemSelected(item);
     }
 
+    // The next 3 methods implemented from CustomStyleFont interface
 
+    @Override
     public void onStyleChange(CustomStyleDialogFragment dialog, int styleId) {
 
     }
+
+    @Override
     public void onFontChange(CustomStyleDialogFragment dialog, String fontName) {
 
+        // Change font of editText from NoteFragment
+        mNoteFragment.setFont(fontName);
     }
+
+    @Override
     public void onThemeChange(CustomStyleDialogFragment dialog, int themeId){
 
     }
