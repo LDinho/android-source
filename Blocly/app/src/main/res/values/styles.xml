@@ -5,7 +5,10 @@
         <!-- Customize your theme here. -->
         <!-- Window Background -->
         <item name="android:windowBackground">@color/windowBackground</item>
+    </style>
 
+    <style name="TextViewTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:textColor">@color/blue</item>
     </style>
 
 </resources>
