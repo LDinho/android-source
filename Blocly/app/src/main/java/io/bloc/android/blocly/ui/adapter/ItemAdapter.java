@@ -89,6 +89,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
 
             Log.e(TAG, "onLoadingFailed: " + failReason.toString() + " for URL: " + imageUri);
 
+            Throwable t = new Throwable();
+
+            Log.e(TAG, "Stack Trace: ");
+            t.printStackTrace();
+
         }
 
         @Override
